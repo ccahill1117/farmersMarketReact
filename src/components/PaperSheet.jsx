@@ -5,11 +5,13 @@ import Typography from '@material-ui/core/Typography';
 import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles';
 import blue from '@material-ui/core/colors/blue';
 
-const paperStyle = {
-  padding: '10px',
-}
 
 function PaperSheet(props) {
+  let panelColor = props.color;
+  const paperStyle = {
+    padding: '10px',
+    backgroundColor: panelColor,
+  }
 
   return (
       <Paper style={paperStyle} elevation={1} >
@@ -30,7 +32,8 @@ PaperSheet.propTypes = {
   day: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   hours: PropTypes.string.isRequired,
-  booth: PropTypes.string.isRequired
+  booth: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired
 };
 
 

@@ -31,8 +31,9 @@ function Month(props) {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
+            <span>Availble in the month of {props.month}: </span>
             {props.selection.map((item,index) =>
-              <span>{item} </span>
+              <span key={index}>{item} </span>
             )}
           </Typography>
         </ExpansionPanelDetails>
@@ -49,28 +50,3 @@ Month.propTypes = {
 
 
 export default withStyles(styles)(Month);
-
-// function Month(props) {
-//   return (
-//     <div>
-//       <Paper elevation={1} >
-//         <Typography variant="h5" component="h3">
-//           {props.month}
-//         </Typography>
-//         <Typography component="ul">
-//          {props.selection.map((fruit, index) =>
-//            <li>{fruit}</li>
-//          )}
-//         </Typography>
-//       </Paper>
-//     </div>
-//   );
-// }
-//
-// Month.propTypes = {
-//   month: PropTypes.string,
-//
-// };
-//
-//
-// export default Month;
