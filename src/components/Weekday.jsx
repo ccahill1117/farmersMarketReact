@@ -1,5 +1,4 @@
 import React from 'react';
-import WeekdayCard from './WeekdayCard';
 import PaperSheet from './PaperSheet';
 
 const marketSchedule = [

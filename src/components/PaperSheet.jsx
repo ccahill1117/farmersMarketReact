@@ -1,22 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles';
+import blue from '@material-ui/core/colors/blue';
 
-const styles = {
-    margin: '10px',
-    padding: '10px',
-    fontFamily: "'Oswald', sans-serif",
-
-};
 
 
 function PaperSheet(props) {
 
   return (
-    <div>
-      <Paper elevation={1} style={styles}>
+      <Paper elevation={1} >
         <Typography variant="h5" component="h3">
           {props.day}
         </Typography>
@@ -27,7 +21,6 @@ function PaperSheet(props) {
           {props.hours}
         </Typography>
       </Paper>
-    </div>
   );
 }
 
@@ -39,4 +32,4 @@ PaperSheet.propTypes = {
 };
 
 
-export default withStyles(styles)(PaperSheet);
+export default (PaperSheet);
