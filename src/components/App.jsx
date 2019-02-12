@@ -6,7 +6,7 @@ function App(){
   return (
     <div>
     <Weekday />
-    <PaperSheet />
+
     </div>
   );
 }

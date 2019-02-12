@@ -4,24 +4,27 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-const styles = theme => ({
-  root: {
-    margin: '30px',
-    padding: '30px'
-  },
-});
+const styles = {
+    margin: '10px',
+    padding: '10px',
+    fontFamily: "'Oswald', sans-serif",
+
+};
+
 
 function PaperSheet(props) {
-  const { classes } = props;
 
   return (
     <div>
-      <Paper className={classes.root} elevation={1}>
+      <Paper elevation={1} style={styles}>
         <Typography variant="h5" component="h3">
-          This is a sheet of paper.
+          {props.day}
         </Typography>
-        <Typography component="p">
-          Paper can be used to build surface or other elements for your application.
+        <Typography component="h5">
+          {props.location}
+          <hr />
+         <strong>Booth: {props.booth}</strong> --
+          {props.hours}
         </Typography>
       </Paper>
     </div>
@@ -29,7 +32,11 @@ function PaperSheet(props) {
 }
 
 PaperSheet.propTypes = {
-  classes: PropTypes.object.isRequired,
+  day: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  hours: PropTypes.string.isRequired,
+  booth: PropTypes.string.isRequired
 };
+
 
 export default withStyles(styles)(PaperSheet);
