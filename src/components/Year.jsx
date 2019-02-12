@@ -3,6 +3,7 @@ import Month from './Month';
 const availableProduce = [
    {
       month: "January",
+      season: "winter",
       selection: [
          "Apples",
          "Hazelnuts",
@@ -16,6 +17,7 @@ const availableProduce = [
    },
    {
       month: "February",
+      season: "winter",
       selection: [
          "Apples",
          "Hazelnuts",
@@ -28,6 +30,7 @@ const availableProduce = [
    },
    {
       month: "March",
+      season: "spring",
       selection: [
          "Apples",
          "Hazelnuts",
@@ -41,6 +44,7 @@ const availableProduce = [
    },
    {
       month: "April",
+      season: "spring",
       selection: [
          "Apples",
          "Hazelnuts",
@@ -56,6 +60,7 @@ const availableProduce = [
    },
    {
       month: "May",
+      season: "spring",
       selection: [
          "Apples",
          "Hazelnuts",
@@ -71,6 +76,7 @@ const availableProduce = [
    },
    {
       month: "June",
+      season: "summer",
       selection: [
          "Apples",
          "Hazelnuts",
@@ -93,6 +99,7 @@ const availableProduce = [
    },
    {
       month: "July",
+      season: "summer",
       selection: [
          "Apples",
          "Hazelnuts",
@@ -129,6 +136,7 @@ const availableProduce = [
    },
    {
       month: "August",
+      season: "summer",
       selection: [
          "Apples",
          "Apricots",
@@ -169,6 +177,7 @@ const availableProduce = [
    },
    {
       month: "September",
+      season: "fall",
       selection: [
          "Apples",
          "Blueberries",
@@ -203,6 +212,7 @@ const availableProduce = [
    },
    {
       month: "October",
+      season: "fall",
       selection: [
          "Apples",
          "Grapes",
@@ -236,6 +246,7 @@ const availableProduce = [
    },
    {
       month: "November",
+      season: "fall",
       selection: [
          "Apples",
          "Hazelnuts",
@@ -253,6 +264,7 @@ const availableProduce = [
    },
    {
       month: "December",
+      season: "winter",
       selection: [
          "Apples",
          "Hazelnuts",
@@ -284,6 +296,7 @@ function Year(){
       {availableProduce.map((month, index) =>
         <Month month ={month.month}
           selection={month.selection}
+          season={month.season}
           key={index}
           />
       )}

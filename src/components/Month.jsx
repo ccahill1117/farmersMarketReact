@@ -18,14 +18,30 @@ const styles = theme => ({
   },
   monthPanel: {
     margin: '10px',
+
   }
 });
 
 function Month(props) {
+  let seasonColor;
+  if(props.season === 'winter'){
+    seasonColor = '#ADD8E6';
+  } else if(props.season === 'spring'){
+    seasonColor = '#4E9258';
+  } else if(props.season === 'summer'){
+    seasonColor ='#F2BB66';
+  } else if(props.season === 'fall'){
+    seasonColor = '#F87431';
+  };
+
+  const seasonStyle = {
+    backgroundColor: seasonColor,
+  }
+
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <ExpansionPanel className={classes.monthPanel}>
+      <ExpansionPanel className={classes.monthPanel} style={seasonStyle}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography className={classes.heading}>{props.month}</Typography>
         </ExpansionPanelSummary>
@@ -45,6 +61,7 @@ function Month(props) {
 Month.propTypes = {
   classes: PropTypes.object.isRequired,
   month: PropTypes.string.isRequired,
+  season: PropTypes.string.isRequired,
   selection: PropTypes.array.isRequired,
 };
 

@@ -54,7 +54,7 @@ function Weekday(){
   gridGap: '1em',
   padding: '20px',
   gridTemplateColumns: 'repeat(auto-fit, 200px)',
-  gridTemplateRows: 'repeat(2, 200px)',
+
 }
 
 
