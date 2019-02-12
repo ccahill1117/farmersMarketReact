@@ -5,12 +5,14 @@ import Typography from '@material-ui/core/Typography';
 import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles';
 import blue from '@material-ui/core/colors/blue';
 
-
+const paperStyle = {
+  padding: '10px',
+}
 
 function PaperSheet(props) {
 
   return (
-      <Paper elevation={1} >
+      <Paper style={paperStyle} elevation={1} >
         <Typography variant="h5" component="h3">
           {props.day}
         </Typography>

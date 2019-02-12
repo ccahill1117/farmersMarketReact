@@ -269,8 +269,6 @@ const availableProduce = [
    }
 ];
 
-
-
 function Year(){
   var myWeekdayGrid = {
   display: 'grid',
@@ -282,7 +280,7 @@ function Year(){
 
 
   return (
-    <div style={myWeekdayGrid}>
+    <div>
       {availableProduce.map((month, index) =>
         <Month month ={month.month}
           selection={month.selection}
