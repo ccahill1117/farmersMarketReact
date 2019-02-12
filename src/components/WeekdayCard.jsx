@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 function WeekdayCard(props){
   return (
     <div>
+
       <h1>{props.day}</h1>
       <h3>{props.location}</h3>
       <p>{props.hours}</p>
