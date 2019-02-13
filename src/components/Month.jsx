@@ -36,13 +36,16 @@ function Month(props) {
 
   const seasonStyle = {
     backgroundColor: seasonColor,
+
   }
 
   const { classes } = props;
   return (
     <div className={classes.root}>
       <ExpansionPanel className={classes.monthPanel} style={seasonStyle}>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+        <ExpansionPanelSummary expandIcon={<img src="https://cdn4.iconfinder.com/data/icons/smiley-face-2/48/90-512.png" style={{
+          width: '9%',
+        }}></img>}>
           <Typography className={classes.heading}>{props.month}</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>

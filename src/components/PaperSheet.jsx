@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles';
 import blue from '@material-ui/core/colors/blue';
 
 
@@ -11,11 +10,12 @@ function PaperSheet(props) {
   const paperStyle = {
     padding: '10px',
     backgroundColor: panelColor,
+
   }
 
   return (
       <Paper style={paperStyle} elevation={1} >
-        <Typography variant="h5" component="h3">
+        <Typography variant="h5">
           {props.day}
         </Typography>
         <Typography component="h5">

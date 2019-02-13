@@ -47,21 +47,20 @@ const marketSchedule = [
 ];
 
 
-
 function Weekday(){
   var myWeekdayGrid = {
   display: 'grid',
   gridGap: '1em',
   padding: '20px',
   gridTemplateColumns: 'repeat(auto-fit, 200px)',
-
 }
 
 
   return (
     <div style={myWeekdayGrid}>
       {marketSchedule.map((weekday, index) =>
-        <PaperSheet day ={weekday.day}
+        <PaperSheet
+          day={weekday.day}
           location={weekday.location}
           hours={weekday.hours}
           booth={weekday.booth}
