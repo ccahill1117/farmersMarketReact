@@ -1,5 +1,6 @@
 import React from 'react';
 import PaperSheet from './PaperSheet';
+import squashimg from '../assets/images/squash.jpg';
 
 const marketSchedule = [
  {
@@ -57,17 +58,22 @@ function Weekday(){
 
 
   return (
-    <div style={myWeekdayGrid}>
-      {marketSchedule.map((weekday, index) =>
-        <PaperSheet
-          day={weekday.day}
-          location={weekday.location}
-          hours={weekday.hours}
-          booth={weekday.booth}
-          color={weekday.color}
-          key={index}
-          />
-      )}
+    <div>
+      <div style={myWeekdayGrid}>
+        {marketSchedule.map((weekday, index) =>
+          <PaperSheet
+            day={weekday.day}
+            location={weekday.location}
+            hours={weekday.hours}
+            booth={weekday.booth}
+            color={weekday.color}
+            key={index}
+            />
+        )}
+      </div>
+      <img src={squashimg} style={{
+        width: '300px',
+      }}/>
     </div>
   );
 }
