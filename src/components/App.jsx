@@ -5,6 +5,7 @@ import Header from './Header';
 import PropTypes from 'prop-types';
 import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles';
 import { Switch, Route } from 'react-router-dom';
+import Error404 from './Error404';
 
 
 const theme = createMuiTheme({
@@ -25,6 +26,7 @@ function App(){
       <Switch>
         <Route exact path='/' component={Weekday} />
         <Route path='/Year' component={Year} />
+        <Route component={Error404} />
       </Switch>
     </div>
   );
